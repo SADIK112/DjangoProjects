@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+h2 {
+  font-size: 250%; background-color:LightBlue; color:Green;
+}
+
+p {
+  font-size: 150%;color:Green;
+}
+
+form {
+  font-size: 100%;color:Green;font-weight: bold;
+}
+legend {
+   border: 3px solid Green;
+}
+</style>
+</head>
+<body>
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="container">
+          <div class="alert alert-success" role="alert">
+              <strong>Congrats!</strong> {{ message }}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+
+
+<h2>ডাক্তার লগ ইন পেজ</h2>
+
+<form method="post" action="/doctor_login">
+    {% csrf_token %}
+    <fieldset>
+    
+    নাম :<br>
+    <input type="text" name="doctor_name" placeholder="নাম">
+    <br>
+   	
+	পাসওয়ার্ড  : <br>
+    <input type="password" name="password" placeholder="পাসওয়ার্ড  ">
+    <br>
+	
+<br>
+    <input type="submit" value="সাবমিট করুন ">
+  </fieldset>
+</form>
+
+</body>
+</html>

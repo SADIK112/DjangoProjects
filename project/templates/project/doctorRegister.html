@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+    
+    h2 {
+    font-size: 250%; background-color:LightBlue; color:Green;
+    }
+
+    p {
+    font-size: 150%;color:Green;
+    }
+
+    form {
+    font-size: 100%;color:Green;font-weight: bold;
+    }
+    legend {
+    border: 3px solid Green;
+    }
+    </style>
+    </head>
+    <body>
+
+            {% if messages %}
+            {% for message in messages %}
+            <div class="container">
+              <div class="alert alert-success" role="alert">
+                  <strong>Congrats!</strong> {{ message }}
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
+          
+
+    <h2>ডাক্তার রেজিস্ট্রেশন পেজ</h2>
+    <p>নিচের ফরমটি পুরন করুন এবং আপনি হয়ে যান আমাদের রেজিস্টার্ড ডাক্তার । বিনামুল্যে সেবা দিন , মানবতার সেবায় এগিয়ে আসুন । সুস্থ , সুখী বাংলাদেশ গড়ুন ।</p>
+    <form method="post" action="/doctor_register">
+        {% csrf_token %}
+        
+    <fieldset>
+            
+        <legend>:ব্যাক্তিগত তথ্য  : </legend>
+        
+        ডাক্তার নাম :<br>
+        <input type="text" name="doctor_name" placeholder="ডাক্তার নাম ">
+        {% if messages %}
+        {%for message in messages %}
+        {%if "doctor_name" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+        <br>
+
+        <input type="checkbox" name="diabetes_specialist" value="1" id="temp" checked="checked"> Diabetes Specialist
+        {% if messages %}
+        {%for message in messages %}
+        {%if "specialist" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+        <br>
+
+        কর্মস্থল:<br>
+        <input type="text" name="location" placeholder="কর্মস্থল">
+        {% if messages %}
+        {%for message in messages %}
+        {%if "location" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+
+        বর্তমান ঠিকানা :<br>
+        <textarea rows="5" cols="40" placeholder="বর্তমান ঠিকানা" name="address"></textarea>
+        {% if messages %}
+        {%for message in messages %}
+        {%if "address" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+
+        মোবাইল নং :<br>
+        <input type="text" name="phonenumber" placeholder="মোবাইল">
+        {% if messages %}
+        {%for message in messages %}
+        {%if "phonenumber" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+
+        আপনার নির্ধারীত সময় : <br>
+        <input type="text" name="shedule" placeholder="নির্ধারীত সময়">
+        {% if messages %}
+        {%for message in messages %}
+        {%if "shedule" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+
+        আপনার ফি : <br>
+        <input type="text" name="fees" placeholder="ফি">
+        {% if messages %}
+        {%for message in messages %}
+        {%if "fees" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+
+        পাসওয়ার্ড  : <br>
+        <input type="password" name="password" placeholder="পাসওয়ার্ড  ">
+        {% if messages %}
+        {%for message in messages %}
+        {%if "password" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+
+        পাসওয়ার্ড নিশ্চিত করুন  : <br>
+        <input type="password" name="confirm_password" placeholder="কনফার্ম পাসওয়ার্ড  ">
+        {% if messages %}
+        {%for message in messages %}
+        {%if "confirm_password" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+        <br>
+    <br>
+        <input type="submit" value="সাবমিট করুন ">
+    </fieldset>
+    </form>
+
+    </body>
+</html>

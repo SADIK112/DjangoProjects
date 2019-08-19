@@ -1,0 +1,22 @@
+{% extends 'project/layout.html' %}
+
+{% block content %}
+
+<div class="footer">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav nav-tabs nav-justified">
+
+        <li><a href="{% url "project:doctorRegister" %}">সেচ্ছাস্বেবী ডাক্তারের রেজিস্ট্রেশন</a></li>
+        <li><a href="{% url "project:doctorLogin" %}">ডাক্তার লগ ইন</a></li>
+        <li><a href="{% url "project:patientRegister" %}">রোগীর রেজিস্ট্রেশন</a></li>
+        <li><a href="{% url "project:patientLogin" %}">রোগীর লগ ইন</a></li>
+        <li><a href="#">ডাক্তারের তালিকা</a></li>
+        <li><a href="#">যোগাযোগ</a></li>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+
+{% endblock %}

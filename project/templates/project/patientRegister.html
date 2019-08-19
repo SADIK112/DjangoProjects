@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+    h2 {
+    font-size: 250%; background-color:LightBlue; color:Green;
+    }
+
+    p {
+    font-size: 150%;color:Green;
+    }
+
+    form {
+    font-size: 100%;color:Green;font-weight: bold;
+    }
+    legend {
+    border: 3px solid Green;
+    }
+    </style>
+    </head>
+    <body>
+
+            {% if messages %}
+            {% for message in messages %}
+            <div class="container">
+              <div class="alert alert-success" role="alert">
+                  <strong>Congrats!</strong> {{ message }}
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
+          
+
+    <h2>রোগী রেজিস্ট্রেশন পেজ</h2>
+    <p>নিচের ফরমটি পুরন করুন এবং আপনি হয়ে যান আমাদের রেজিস্টার্ড সদস্য। বিনামুল্যে সেবা নিন , সুস্থ থাকুন ।</p>
+    <form method="post" action="/register">
+        {% csrf_token %}
+    <fieldset>
+        <legend>:ব্যাক্তিগত তথ্য  : </legend>
+            প্রথম নাম :<br>
+        <input type="text" name="first_name" placeholder="নাম">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "first_name" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+        শেষ নাম :<br>
+        <input type="text" name="last_name" placeholder="নাম">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "last_name" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+        ইউসার নাম:<br>
+        <input type="text" name="username" placeholder="ইউসার নাম">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "username" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+        ইমেইল :<br>
+        <input type="text" name="email" placeholder="ইমেইল">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "email" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+            মোবাইল নং :<br>
+        <input type="text" name="phonenumber" placeholder="মোবাইল">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "phonenumber" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+        বর্তমান ঠিকানা :<br>
+        <input type="text" name="address" placeholder=" বর্তমান ঠিকানা">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "address" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+        পাসওয়ার্ড  : <br>
+        <input type="password" name="password" placeholder="পাসওয়ার্ড  ">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "password" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+        পাসওয়ার্ড নিশ্চিত করুন  : <br>
+        <input type="password" name="confirm_password" placeholder="কনফার্ম পাসওয়ার্ড  ">
+
+        {% if messages %}
+        {%for message in messages %}
+        {%if "confirm_password" in message.tags %}
+        <div class="form-group has-danger">
+            <div class="form-control-feedback">{{message}}</div>
+        </div>
+        {%endif%} {%endfor%} {% endif %}
+
+        <br>
+    <br>
+        <input type="submit" value="সাবমিট করুন ">
+    </fieldset>
+    </form>
+
+</body>
+</html>

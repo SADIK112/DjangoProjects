@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+
+.body{
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+    }
+
+h1{color : black}
+h2{color : powerblue}
+
+.header{
+    background-color: powderblue;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    margin-left: 10;
+
+
+}
+.nav-tabs{
+
+    background-color:powerblue;
+    color:red;
+    }
+
+.nav-justified{
+     background-color: powderblue;
+     color : red;
+     }
+
+.relative{
+    position: relative;
+    left: 900px;
+
+    border: 3px solid ;
+    }
+
+.relative{
+position: relative;
+left: 0px;
+
+border: 3px solid #73AD21;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: green;
+    color:yellow;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    color : Green;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+
+<div class="header" style="background-size:950px 300px; background-repeat: no-repeat;">
+  <h1>ডায়বেটিস হেল্প বাংলা</h1>
+  <p>ডায়বেটিস সম্পর্কে জানুন, সচেতন হোন</p>
+</div>
+
+
+<div class="topnav">
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <ul class="nav navbar-nav nav-tabs nav-justified" >
+        <li>
+            <i class="fa fa-home" style="font-size:36px"></i>
+            <a href="#">ডায়বেটিস কি?</a></li>
+        <li >
+            <span class="glyphicon glyphicon-bell" style="font-size:36px;"></span>
+
+
+
+            <a href="/sign"
+
+
+            >ডায়বেটিসের উপসর্গ</a></li>
+        <li >
+            <i class="fa fa-support" style="font-size:36px"></i>
+            <a href="#">ডায়বেটিসে করনীয়</a></li>
+      <li >
+          <i class="fa fa-stethoscope" style="font-size:36px;"></i>
+          <a href="#">ডায়বেটিসের চিকিৎসা</a></li>
+
+      <li>
+          <span class="glyphicon glyphicon-alert"  style="font-size:36px;"></span>
+          <a href="#">ডায়বেটিস থেকে বাঁচতে সতর্কতা</a></li>
+
+
+    </ul>
+
+  </div>
+</nav>
+</div>
+<div class="row">
+  <div class="leftcolumn" >
+    <div class="card" style="background-size:950px 300px; background-repeat: no-repeat;">
+      <h2>ডায়বেটিস কি ?</h2>
+      <p>যখন আপনার শরীর যথাযথভাবে ব্লাড গ্লুকোজ (রক্তে থাকা গ্লুকোজ) ব্যবহার করতে পারে না, তখন ডায়াবিটিস রোগ হয় ।
+আমাদের দেহ শক্তির জন্য রক্তে থাকা গ্লুকোজ ব্যবহার করে।  আমরা যখন কিছু খাই বা পান
+করি যাতে শ্বেতসার বা শর্করা থাকে যেমন চাপাটি, ভাত, রুটি, আলু, পাস্তা, বিস্কুট, মিষ্টি, ফিজি (ঝাঁজালো) পানীয় এবং ফলের রস তখন রক্তে গ্লুকোজের মাত্রা বেড়ে যায়।
+          আপনার যখন ডায়াবিটিস হয়, তখন আপনার রক্তে গ্লুকোজের মাত্রা বেশি থাকে কারণ আপনার শরীর তার প্রয়োজনীয় শক্তির
+জন্য যথাযথভাবে গ্লুকোজ ব্যবহার করতে পারে না। এই অবস্থা ঠিক না করলে জটিলতা সৃষ্টি হতে পারে যার দরুন আপনি অন্ধ
+হয়ে যেতে পারেন, আপনার হার্ট অ্যাট্যাক বা স্ট্রোক হতে পারে, অথবা অঙ্গ কেটে বাদ দিতেও হতে পারে।
+
+      </p>
+      <h2>
+          ডায়বেটিসের ইতিহাস
+      </h2>
+      <p>
+          সর্বপ্রথম ১৫২৫ খ্রিস্টাব্দে একজন মিশরীয় চিকিৎসক হেসি-রা, একটি রহস্যময় রোগের লক্ষণ হিসাবে ঘন ঘন
+          প্রস্রাব নথিভুক্ত করেছিলেন যা হতাশা সৃষ্টি করেছিল। এ সময়ও, প্রাচীন হিলাররা লক্ষ করেছিলেন যে পিঁপড়াগুলি এই রোগের রোগীদের মূত্রকে আকৃষ্ট করেছিল।
+          150 খ্রিস্টাব্দে, গ্রিক চিকিত্সক অ্যারেয়াসাস ডায়বেটিস কে "মাংস এবং হাড় প্রস্রাবের সাথে গলে যাওয়া" নামে নামকরন করেছিলেন ।
+          তারপর থেকে, চিকিত্সক ডায়াবেটিস সম্পর্কে একটি ভাল ধারনা লাভ করতে শুরু করেন।
+      </p>
+
+       <p>
+          সর্বপ্রথম ১৫২৫ খ্রিস্টাব্দে একজন মিশরীয় চিকিৎসক হেসি-রা, একটি রহস্যময় রোগের লক্ষণ হিসাবে ঘন ঘন
+          প্রস্রাব নথিভুক্ত করেছিলেন যা হতাশা সৃষ্টি করেছিল। এ সময়ও, প্রাচীন হিলাররা লক্ষ করেছিলেন যে পিঁপড়াগুলি এই রোগের রোগীদের মূত্রকে আকৃষ্ট করেছিল।
+          150 খ্রিস্টাব্দে, গ্রিক চিকিত্সক অ্যারেয়াসাস ডায়বেটিস কে "মাংস এবং হাড় প্রস্রাবের সাথে গলে যাওয়া" নামে নামকরন করেছিলেন ।
+          তারপর থেকে, চিকিত্সক ডায়াবেটিস সম্পর্কে একটি ভাল ধারনা লাভ করতে শুরু করেন।
+      </p>
+  </div>
+  </div>
+  <div class="rightcolumn">
+   <div class="container">
+    <div class="relative">
+    <div class="nav navbar-nav nav-pills nav-stacked">
+        <div class="sidenav">
+        <div class="well">
+            <p><a href="#">আপনার ডায়বেটিস পরীক্ষা করার প্রয়োজনীয়তা কতটুকু?</a></p></div>
+        <div class="well">
+            <p><a href="#">ডায়বেটিসে আক্রান্ত</a></p></div>
+        <div class="well">
+            <p><a href="#">ডায়বেটিস ঝুঁকিপূর্ণ</a></p></div>
+        <div class="well">
+            <p><a href="#">ডায়বেটিসমুক্ত</a></p></div>
+        </div>
+
+    </div>
+    </div>
+  </div>
+    <div class="card">
+      <h3>আমাদের ডাক্তারের সাহায্য  নিন</h3>
+      <div class="container">
+          <h4>সরাসরি কথা বলুন <span class="glyphicon glyphicon-earphone"></span></h4>
+          <p> হটলাইন ঃ 001111111111111111</p>
+      </div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+
+  </div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+</html>
+   
+    
+
+
